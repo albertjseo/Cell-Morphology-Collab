@@ -16,10 +16,10 @@ class CellMorphology:
 
     def get_image_path(self):
         """
-        Prompt for opening an image. Defaults to only allowing PNG files. Saves
-        path as class member variable
+        Prompt for opening an image. Defaults to only allowing PNG and JPEG
+        files. Saves path as class member variable
         """
-        filetypes = (('PNG images', '*.png'), ('All files', '*.*'))
+        filetypes = (('Images', '*.png *.jpg *.jpeg'), ('All files', '*.*'))
 
         self.image_path = fd.askopenfilename(title="Open an image",
                                              filetypes=filetypes)
