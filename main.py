@@ -8,11 +8,12 @@ from analysis import Analysis
 
 
 class CellMorphology:
-    root = None
-    image_path = None
-    image = None
-    image_canvas = None
-    Analysis = None
+    def __init__(self):
+        self.root = None
+        self.image_path = None
+        self.image = None
+        self.image_canvas = None
+        self.Analysis = None
 
     def get_image_path(self):
         """
