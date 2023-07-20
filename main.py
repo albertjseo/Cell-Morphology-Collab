@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import filedialog as fd
 
 from PIL import ImageTk, Image
-from pandastable import Table, TableModel
+from pandastable import Table
 
 from analysis import Analysis
 
@@ -64,8 +64,11 @@ class CellMorphology:
         table_frame = tk.Frame(self.root)
         table_frame.place(relx=0.5, y=50, anchor=tk.N)
 
-        # TODO: Replace with actual data instead of sample data
-        results = TableModel.getSampleData()
+        if self.Analysis is None:
+            self.run_analysis()
+
+        results = self.Analysis.get_cell_measurements()
+
         results_table = Table(table_frame, dataframe=results)
         results_table.show()
 

@@ -1,3 +1,5 @@
+from pandastable import TableModel
+
 class Analysis:
     """
     # TODO: Write description of what this analysis does
@@ -29,4 +31,7 @@ class Analysis:
 
         :return: Pandas DataFrame
         """
+        # TODO: Remove returning of sample data
+        self.cell_measurements = TableModel.getSampleData()
+
         return self.cell_measurements
