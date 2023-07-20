@@ -25,6 +25,8 @@ class CellMorphology:
         self.image_path = fd.askopenfilename(title="Open an image",
                                              filetypes=filetypes)
 
+        self.display_image()
+
     def display_image(self):
         """
         Displays input image to the user
