@@ -1,5 +1,6 @@
 from pandastable import TableModel
 
+
 class Analysis:
     """
     # TODO: Write description of what this analysis does
